@@ -7,7 +7,7 @@ description: Apify actors for Siemens SiePortal MPN discovery, lifecycle checks,
 
 Structured data extraction for **Siemens SiePortal** (Industry Mall), **SIOS**, and **TED** product datasheets.
 
-[View full documentation on GitHub](https://github.com/crawloop/siemens-sieportal-automation#readme) · [Apify Store — Crawloop](https://apify.com/crawloop)
+[View full documentation on GitHub](https://github.com/PLCSPS-DEV/siemens-sieportal-automation#readme) · [Apify Store — Crawloop](https://apify.com/crawloop)
 
 > **Disclaimer:** Unofficial integrations. Not affiliated with, sponsored by, or endorsed by Siemens AG.
 
@@ -34,4 +34,4 @@ Structured data extraction for **Siemens SiePortal** (Industry Mall), **SIOS**, 
               └─► TED Datasheet Downloader ──► TED Datasheet Parser
 ```
 
-See the [full README](https://github.com/crawloop/siemens-sieportal-automation#which-actor-do-i-need) for use cases, pricing, and API examples.
+See the [full README](https://github.com/PLCSPS-DEV/siemens-sieportal-automation#which-actor-do-i-need) for use cases, pricing, and API examples.
