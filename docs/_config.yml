@@ -1,0 +1,27 @@
+title: "Siemens SiePortal Scraper Suite"
+description: "Extract Siemens part numbers (MPN), product specs, lifecycle status, SIOS manuals and TED datasheets from SiePortal and Industry Mall. Apify Actors for BOM audits, catalog export and procurement."
+url: "https://plcsps-dev.github.io"
+baseurl: "/siemens-sieportal-automation"
+lang: en
+
+remote_theme: pages-themes/cayman@v0.2.0
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+twitter:
+  card: summary
+
+author:
+  name: Crawloop
+  url: "https://apify.com/crawloop?fpr=guboir"
+
+social:
+  name: Crawloop on Apify
+  links:
+    - "https://apify.com/crawloop?fpr=guboir"
+    - "https://github.com/PLCSPS-DEV/siemens-sieportal-automation"
+
+google_analytics:

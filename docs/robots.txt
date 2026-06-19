@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://plcsps-dev.github.io/siemens-sieportal-automation/sitemap.xml
