@@ -9,7 +9,7 @@ Structured data extraction for **Siemens SiePortal** (Industry Mall), **SIOS**, 
 
 [View full documentation on GitHub](https://github.com/PLCSPS-DEV/siemens-sieportal-automation#readme) · [Apify Store — Crawloop](https://apify.com/crawloop?fpr=guboir)
 
-> **Disclaimer:** Unofficial integrations. Not affiliated with, sponsored by, or endorsed by Siemens AG.
+> **Disclaimer:** Unofficial integrations. Not affiliated with, sponsored by, or endorsed by Siemens AG. Provided for informational and research purposes only; use at your own risk and comply with applicable terms of use.
 
 ## Actors
 

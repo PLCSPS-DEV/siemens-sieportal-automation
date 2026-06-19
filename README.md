@@ -5,6 +5,12 @@ Structured data extraction for **Siemens SiePortal** (Industry Mall), **SIOS**, 
 All actors run on [Apify](https://apify.com/crawloop?fpr=guboir) — serverless, API-ready, pay-per-result.
 
 > **Disclaimer:** These are unofficial integrations developed independently of Siemens AG. They are not affiliated with, sponsored by, or endorsed by Siemens AG or any of its subsidiaries.
+>
+> **Siemens**, **SiePortal**, **SIMATIC**, and related names are trademarks of Siemens AG. Product data is read from publicly accessible Siemens web sources only; no proprietary databases are redistributed.
+>
+> These tools are provided **for informational and research purposes only** (e.g. procurement research, BOM audits, internal engineering workflows). You are solely responsible for ensuring your use complies with applicable laws, Siemens website terms of use, and your organization's policies.
+>
+> No warranty is given as to accuracy, completeness, or continued availability of third-party data. Use at your own risk.
 
 ---
 
