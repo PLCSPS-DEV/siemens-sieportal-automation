@@ -2,7 +2,7 @@
 
 Structured data extraction for **Siemens SiePortal** (Industry Mall), **SIOS**, and **TED** product datasheets. Built for procurement teams, system integrators, and BOM engineering workflows.
 
-All actors run on [Apify](https://apify.com/crawloop) — serverless, API-ready, pay-per-result.
+All actors run on [Apify](https://apify.com/crawloop?fpr=guboir) — serverless, API-ready, pay-per-result.
 
 > **Disclaimer:** These are unofficial integrations developed independently of Siemens AG. They are not affiliated with, sponsored by, or endorsed by Siemens AG or any of its subsidiaries.
 
@@ -12,8 +12,8 @@ All actors run on [Apify](https://apify.com/crawloop) — serverless, API-ready,
 
 | Discovery | Enrichment | SIOS documents | TED datasheets |
 | :--- | :--- | :--- | :--- |
-| [Catalog Crawler](https://apify.com/crawloop/siemens-sieportal-product-catalog-crawler) | [SiePortal Scraper](https://apify.com/crawloop/siemens-sieportal-scraper) | [Document Downloader](https://apify.com/crawloop/siemens-sieportal-document-downloader) | [TED Datasheet Downloader](https://apify.com/crawloop/siemens-datasheet-downloader) |
-| [Category Scraper](https://apify.com/crawloop/siemens-category-scraper) | [Lifecycle Tracker](https://apify.com/crawloop/siemens-sieportal-product-lifecycle-tracker) | [Document PDF Parser](https://apify.com/crawloop/siemens-sieportal-product-document-pdf-crawler) | [TED Datasheet Parser](https://apify.com/crawloop/siemens-datasheet-pdf-crawler) |
+| [Catalog Crawler](https://apify.com/crawloop/siemens-sieportal-product-catalog-crawler?fpr=guboir) | [SiePortal Scraper](https://apify.com/crawloop/siemens-sieportal-scraper?fpr=guboir) | [Document Downloader](https://apify.com/crawloop/siemens-sieportal-document-downloader?fpr=guboir) | [TED Datasheet Downloader](https://apify.com/crawloop/siemens-datasheet-downloader?fpr=guboir) |
+| [Category Scraper](https://apify.com/crawloop/siemens-category-scraper?fpr=guboir) | [Lifecycle Tracker](https://apify.com/crawloop/siemens-sieportal-product-lifecycle-tracker?fpr=guboir) | [Document PDF Parser](https://apify.com/crawloop/siemens-sieportal-product-document-pdf-crawler?fpr=guboir) | [TED Datasheet Parser](https://apify.com/crawloop/siemens-datasheet-pdf-crawler?fpr=guboir) |
 
 ---
 
@@ -44,33 +44,33 @@ Phase 1 — Discover MPNs          Phase 2 — Screen & enrich       Phase 3 —
 
 | Your goal | Start here |
 | :--- | :--- |
-| Find Siemens part numbers by keyword (`6ES`, `SIMATIC`, `S7-1200`) | [Catalog Crawler](https://apify.com/crawloop/siemens-sieportal-product-catalog-crawler) |
-| Export all MPNs under a SiePortal category branch | [Category Scraper](https://apify.com/crawloop/siemens-category-scraper) |
-| Full product specs, lifecycle, document links, accessories — by MPN | [SiePortal Scraper](https://apify.com/crawloop/siemens-sieportal-scraper) |
-| Bulk BOM check: lifecycle phase + successor MPNs (fast, low cost) | [Lifecycle Tracker](https://apify.com/crawloop/siemens-sieportal-product-lifecycle-tracker) |
-| Download CE/UL/manual PDFs from SIOS to Key-Value Store | [Document Downloader](https://apify.com/crawloop/siemens-sieportal-document-downloader) |
-| Extract structured specs from SIOS/manual PDFs | [Document PDF Parser](https://apify.com/crawloop/siemens-sieportal-product-document-pdf-crawler) |
-| Download official TED catalog datasheet PDF (1 MLFB → 1 PDF) | [TED Datasheet Downloader](https://apify.com/crawloop/siemens-datasheet-downloader) |
-| Parse TED PDFs into JSON specs (no browser) | [TED Datasheet Parser](https://apify.com/crawloop/siemens-datasheet-pdf-crawler) |
+| Find Siemens part numbers by keyword (`6ES`, `SIMATIC`, `S7-1200`) | [Catalog Crawler](https://apify.com/crawloop/siemens-sieportal-product-catalog-crawler?fpr=guboir) |
+| Export all MPNs under a SiePortal category branch | [Category Scraper](https://apify.com/crawloop/siemens-category-scraper?fpr=guboir) |
+| Full product specs, lifecycle, document links, accessories — by MPN | [SiePortal Scraper](https://apify.com/crawloop/siemens-sieportal-scraper?fpr=guboir) |
+| Bulk BOM check: lifecycle phase + successor MPNs (fast, low cost) | [Lifecycle Tracker](https://apify.com/crawloop/siemens-sieportal-product-lifecycle-tracker?fpr=guboir) |
+| Download CE/UL/manual PDFs from SIOS to Key-Value Store | [Document Downloader](https://apify.com/crawloop/siemens-sieportal-document-downloader?fpr=guboir) |
+| Extract structured specs from SIOS/manual PDFs | [Document PDF Parser](https://apify.com/crawloop/siemens-sieportal-product-document-pdf-crawler?fpr=guboir) |
+| Download official TED catalog datasheet PDF (1 MLFB → 1 PDF) | [TED Datasheet Downloader](https://apify.com/crawloop/siemens-datasheet-downloader?fpr=guboir) |
+| Parse TED PDFs into JSON specs (no browser) | [TED Datasheet Parser](https://apify.com/crawloop/siemens-datasheet-pdf-crawler?fpr=guboir) |
 
 ### Two PDF pipelines — do not mix them up
 
 | Pipeline | Source | Download | Parse |
 | :--- | :--- | :--- | :--- |
-| **SIOS** | Manuals, certificates, engineering files | [Document Downloader](https://apify.com/crawloop/siemens-sieportal-document-downloader) | [Document PDF Parser](https://apify.com/crawloop/siemens-sieportal-product-document-pdf-crawler) |
-| **TED** | Compact Industry Mall product datasheet | [TED Datasheet Downloader](https://apify.com/crawloop/siemens-datasheet-downloader) | [TED Datasheet Parser](https://apify.com/crawloop/siemens-datasheet-pdf-crawler) |
+| **SIOS** | Manuals, certificates, engineering files | [Document Downloader](https://apify.com/crawloop/siemens-sieportal-document-downloader?fpr=guboir) | [Document PDF Parser](https://apify.com/crawloop/siemens-sieportal-product-document-pdf-crawler?fpr=guboir) |
+| **TED** | Compact Industry Mall product datasheet | [TED Datasheet Downloader](https://apify.com/crawloop/siemens-datasheet-downloader?fpr=guboir) | [TED Datasheet Parser](https://apify.com/crawloop/siemens-datasheet-pdf-crawler?fpr=guboir) |
 
 ---
 
 ## Use cases
 
-**BOM obsolescence audit** — Run [Lifecycle Tracker](https://apify.com/crawloop/siemens-sieportal-product-lifecycle-tracker) on your full MPN list. Filter discontinued parts and successors. Enrich only replacements with [SiePortal Scraper](https://apify.com/crawloop/siemens-sieportal-scraper).
+**BOM obsolescence audit** — Run [Lifecycle Tracker](https://apify.com/crawloop/siemens-sieportal-product-lifecycle-tracker?fpr=guboir) on your full MPN list. Filter discontinued parts and successors. Enrich only replacements with [SiePortal Scraper](https://apify.com/crawloop/siemens-sieportal-scraper?fpr=guboir).
 
-**Procurement catalog build** — Discover MPNs with [Catalog Crawler](https://apify.com/crawloop/siemens-sieportal-product-catalog-crawler) or [Category Scraper](https://apify.com/crawloop/siemens-category-scraper). Export deduplicated part numbers with PDP URLs for ERP import.
+**Procurement catalog build** — Discover MPNs with [Catalog Crawler](https://apify.com/crawloop/siemens-sieportal-product-catalog-crawler?fpr=guboir) or [Category Scraper](https://apify.com/crawloop/siemens-category-scraper?fpr=guboir). Export deduplicated part numbers with PDP URLs for ERP import.
 
-**Compliance documentation pack** — Download certificates and manuals via [Document Downloader](https://apify.com/crawloop/siemens-sieportal-document-downloader). Parse specification tables with [Document PDF Parser](https://apify.com/crawloop/siemens-sieportal-product-document-pdf-crawler).
+**Compliance documentation pack** — Download certificates and manuals via [Document Downloader](https://apify.com/crawloop/siemens-sieportal-document-downloader?fpr=guboir). Parse specification tables with [Document PDF Parser](https://apify.com/crawloop/siemens-sieportal-product-document-pdf-crawler?fpr=guboir).
 
-**High-volume datasheet extraction** — [TED Datasheet Downloader](https://apify.com/crawloop/siemens-datasheet-downloader) → [TED Datasheet Parser](https://apify.com/crawloop/siemens-datasheet-pdf-crawler). HTTP download + parse-only chain, no browser on the parse step.
+**High-volume datasheet extraction** — [TED Datasheet Downloader](https://apify.com/crawloop/siemens-datasheet-downloader?fpr=guboir) → [TED Datasheet Parser](https://apify.com/crawloop/siemens-datasheet-pdf-crawler?fpr=guboir). HTTP download + parse-only chain, no browser on the parse step.
 
 ---
 
@@ -90,7 +90,7 @@ Exact pricing is shown on each Actor page in Apify Store before you run.
 
 ## Quick start
 
-1. Create a free [Apify account](https://apify.com/?fpr=crawloop).
+1. Create a free [Apify account](https://apify.com/?fpr=guboir).
 2. Open the Actor you need from the table above.
 3. Paste your Siemens part numbers (MPNs) or search keywords into the input form.
 4. Run — results appear in Dataset (JSON/CSV) or Key-Value Store (PDFs).
@@ -106,7 +106,7 @@ Exact pricing is shown on each Actor page in Apify Store before you run.
 }
 ```
 
-Run on: [Lifecycle Tracker](https://apify.com/crawloop/siemens-sieportal-product-lifecycle-tracker)
+Run on: [Lifecycle Tracker](https://apify.com/crawloop/siemens-sieportal-product-lifecycle-tracker?fpr=guboir)
 
 **Example — full product record:**
 
@@ -118,7 +118,7 @@ Run on: [Lifecycle Tracker](https://apify.com/crawloop/siemens-sieportal-product
 }
 ```
 
-Run on: [SiePortal Scraper](https://apify.com/crawloop/siemens-sieportal-scraper)
+Run on: [SiePortal Scraper](https://apify.com/crawloop/siemens-sieportal-scraper?fpr=guboir)
 
 ---
 
@@ -145,7 +145,7 @@ for item in client.dataset(run["defaultDatasetId"]).iterate_items():
 
 ## About Crawloop
 
-[Crawloop](https://apify.com/crawloop) builds production-grade web data actors for industrial automation and other verticals. Actor source code is proprietary; this repository is the public product hub and documentation index.
+[Crawloop](https://apify.com/crawloop?fpr=guboir) builds production-grade web data actors for industrial automation and other verticals. Actor source code is proprietary; this repository is the public product hub and documentation index.
 
 Questions or custom enterprise runs: open an issue in this repository or contact via Apify Store.
 
