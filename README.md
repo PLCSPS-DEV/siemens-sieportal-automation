@@ -12,6 +12,10 @@ All actors run on [Apify](https://apify.com/crawloop?fpr=guboir) — serverless,
 >
 > No warranty is given as to accuracy, completeness, or continued availability of third-party data. Use at your own risk.
 
+**Product site:** [crawloop.com/siemens-automation](https://crawloop.com/siemens-automation.html)
+
+> **Also from Crawloop Industrial:** [Rockwell Automation Suite](https://crawloop.com/rockwell-automation.html) · [GitHub docs](https://plcsps-dev.github.io/rockwell-automation/)
+
 ---
 
 ## Actors
@@ -152,6 +156,8 @@ for item in client.dataset(run["defaultDatasetId"]).iterate_items():
 ## About Crawloop
 
 [Crawloop](https://apify.com/crawloop?fpr=guboir) builds production-grade web data actors for industrial automation and other verticals. Actor source code is proprietary; this repository is the public product hub and documentation index.
+
+**Product site:** [crawloop.com/siemens-automation](https://crawloop.com/siemens-automation.html) · **Related suite:** [Rockwell Automation](https://crawloop.com/rockwell-automation.html) · [GitHub docs](https://plcsps-dev.github.io/rockwell-automation/)
 
 Questions or custom enterprise runs: open an issue in this repository or contact via Apify Store.
 

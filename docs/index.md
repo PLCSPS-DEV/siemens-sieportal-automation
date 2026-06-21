@@ -11,7 +11,9 @@ permalink: /
 
 Extract **Siemens part numbers (MPN / MLFB)**, technical specifications, **product lifecycle status**, successor replacements, certificates, manuals, and datasheet PDFs — without manual copy-paste from vendor portals.
 
-[Browse all Actors on Apify](https://apify.com/crawloop?fpr=guboir){: .btn .btn-primary} &nbsp; [View source on GitHub](https://github.com/PLCSPS-DEV/siemens-sieportal-automation)
+[Browse all Actors on Apify](https://apify.com/crawloop?fpr=guboir){: .btn .btn-primary} &nbsp; [Product site on crawloop.com](https://crawloop.com/siemens-automation.html) &nbsp; [View source on GitHub](https://github.com/PLCSPS-DEV/siemens-sieportal-automation)
+
+> **Also from Crawloop Industrial:** [Rockwell Automation Suite](https://crawloop.com/rockwell-automation.html) · [GitHub docs](https://plcsps-dev.github.io/rockwell-automation/)
 
 ---
 
@@ -177,6 +179,8 @@ No. These are unofficial integrations by [Crawloop](https://apify.com/crawloop?f
 ## About Crawloop
 
 [Crawloop](https://apify.com/crawloop?fpr=guboir) builds Apify Actors for **industrial automation catalog data** — vendor portals, part numbers, lifecycle, documents, and structured specs. Part of a growing suite covering Siemens, Rockwell Allen-Bradley, and other OEM catalogs.
+
+**Product site:** [crawloop.com/siemens-automation](https://crawloop.com/siemens-automation.html) · **Related suite:** [Rockwell Automation](https://crawloop.com/rockwell-automation.html) · [GitHub docs](https://plcsps-dev.github.io/rockwell-automation/)
 
 Custom enterprise Actors or scheduled runs: contact via [Apify Store](https://apify.com/crawloop?fpr=guboir) or [open an issue](https://github.com/PLCSPS-DEV/siemens-sieportal-automation/issues).
 
