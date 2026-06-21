@@ -23,7 +23,7 @@ All actors run on [Apify](https://apify.com/crawloop?fpr=guboir) — serverless,
 | Discovery | Enrichment | SIOS documents | TED datasheets |
 | :--- | :--- | :--- | :--- |
 | [Catalog Crawler](https://apify.com/crawloop/siemens-sieportal-product-catalog-crawler?fpr=guboir) | [SiePortal Scraper](https://apify.com/crawloop/siemens-sieportal-scraper?fpr=guboir) | [Document Downloader](https://apify.com/crawloop/siemens-sieportal-document-downloader?fpr=guboir) | [TED Datasheet Downloader](https://apify.com/crawloop/siemens-datasheet-downloader?fpr=guboir) |
-| [Category Scraper](https://apify.com/crawloop/siemens-category-scraper?fpr=guboir) | [Lifecycle Tracker](https://apify.com/crawloop/siemens-sieportal-product-lifecycle-tracker?fpr=guboir) | [Document PDF Parser](https://apify.com/crawloop/siemens-sieportal-product-document-pdf-crawler?fpr=guboir) | [TED Datasheet Parser](https://apify.com/crawloop/siemens-datasheet-pdf-crawler?fpr=guboir) |
+| | [Lifecycle Tracker](https://apify.com/crawloop/siemens-sieportal-product-lifecycle-tracker?fpr=guboir) | [Document PDF Parser](https://apify.com/crawloop/siemens-sieportal-product-document-pdf-crawler?fpr=guboir) | [TED Datasheet Parser](https://apify.com/crawloop/siemens-datasheet-pdf-crawler?fpr=guboir) |
 
 ---
 
@@ -33,9 +33,8 @@ All actors run on [Apify](https://apify.com/crawloop?fpr=guboir) — serverless,
 Phase 1 — Discover MPNs          Phase 2 — Screen & enrich       Phase 3 — Documents & specs
 ─────────────────────────          ─────────────────────────       ─────────────────────────────
 
-  Catalog Crawler  ──┐
-                      ├──► MPN list ──► Lifecycle Tracker ──► SiePortal Scraper
-  Category Scraper ──┘                          │
+  Catalog Crawler ──► MPN list ──► Lifecycle Tracker ──► SiePortal Scraper
+                                    │
                                                  │
                     ┌────────────────────────────┴────────────────────────────┐
                     │                                                          │
@@ -54,8 +53,7 @@ Phase 1 — Discover MPNs          Phase 2 — Screen & enrich       Phase 3 —
 
 | Your goal | Start here |
 | :--- | :--- |
-| Find Siemens part numbers by keyword (`6ES`, `SIMATIC`, `S7-1200`) | [Catalog Crawler](https://apify.com/crawloop/siemens-sieportal-product-catalog-crawler?fpr=guboir) |
-| Export all MPNs under a SiePortal category branch | [Category Scraper](https://apify.com/crawloop/siemens-category-scraper?fpr=guboir) |
+| Export all MPNs via keyword or full-catalog discovery | [Catalog Crawler](https://apify.com/crawloop/siemens-sieportal-product-catalog-crawler?fpr=guboir) |
 | Full product specs, lifecycle, document links, accessories — by MPN | [SiePortal Scraper](https://apify.com/crawloop/siemens-sieportal-scraper?fpr=guboir) |
 | Bulk BOM check: lifecycle phase + successor MPNs (fast, low cost) | [Lifecycle Tracker](https://apify.com/crawloop/siemens-sieportal-product-lifecycle-tracker?fpr=guboir) |
 | Download CE/UL/manual PDFs from SIOS to Key-Value Store | [Document Downloader](https://apify.com/crawloop/siemens-sieportal-document-downloader?fpr=guboir) |
@@ -76,7 +74,7 @@ Phase 1 — Discover MPNs          Phase 2 — Screen & enrich       Phase 3 —
 
 **BOM obsolescence audit** — Run [Lifecycle Tracker](https://apify.com/crawloop/siemens-sieportal-product-lifecycle-tracker?fpr=guboir) on your full MPN list. Filter discontinued parts and successors. Enrich only replacements with [SiePortal Scraper](https://apify.com/crawloop/siemens-sieportal-scraper?fpr=guboir).
 
-**Procurement catalog build** — Discover MPNs with [Catalog Crawler](https://apify.com/crawloop/siemens-sieportal-product-catalog-crawler?fpr=guboir) or [Category Scraper](https://apify.com/crawloop/siemens-category-scraper?fpr=guboir). Export deduplicated part numbers with PDP URLs for ERP import.
+**Procurement catalog build** — Discover MPNs with [Catalog Crawler](https://apify.com/crawloop/siemens-sieportal-product-catalog-crawler?fpr=guboir). Export deduplicated part numbers with PDP URLs for ERP import.
 
 **Compliance documentation pack** — Download certificates and manuals via [Document Downloader](https://apify.com/crawloop/siemens-sieportal-document-downloader?fpr=guboir). Parse specification tables with [Document PDF Parser](https://apify.com/crawloop/siemens-sieportal-product-document-pdf-crawler?fpr=guboir).
 
@@ -90,7 +88,7 @@ Pay-per-event on Apify. You are billed only for successful results — not for `
 
 | Actor | Typical price |
 | :--- | :--- |
-| SiePortal Scraper, Catalog Crawler, Category Scraper, Lifecycle Tracker, Document Downloader | from **$5 / 1,000** results |
+| SiePortal Scraper, Catalog Crawler, Lifecycle Tracker, Document Downloader | from **$5 / 1,000** results |
 | TED Datasheet Downloader | **$2 / 1,000** downloaded PDFs |
 | TED Datasheet Parser, Document PDF Parser (parse-only) | **$2 / 1,000** parsed PDFs |
 

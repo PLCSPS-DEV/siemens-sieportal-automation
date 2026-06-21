@@ -22,7 +22,7 @@ Extract **Siemens part numbers (MPN / MLFB)**, technical specifications, **produ
 | Discovery | Enrichment | SIOS documents | TED datasheets |
 | :--- | :--- | :--- | :--- |
 | [Catalog Crawler](https://apify.com/crawloop/siemens-sieportal-product-catalog-crawler?fpr=guboir) | [SiePortal Scraper](https://apify.com/crawloop/siemens-sieportal-scraper?fpr=guboir) | [Document Downloader](https://apify.com/crawloop/siemens-sieportal-document-downloader?fpr=guboir) | [TED Datasheet Downloader](https://apify.com/crawloop/siemens-datasheet-downloader?fpr=guboir) |
-| [Category Scraper](https://apify.com/crawloop/siemens-category-scraper?fpr=guboir) | [Lifecycle Tracker](https://apify.com/crawloop/siemens-sieportal-product-lifecycle-tracker?fpr=guboir) | [Document PDF Parser](https://apify.com/crawloop/siemens-sieportal-product-document-pdf-crawler?fpr=guboir) | [TED Datasheet Parser](https://apify.com/crawloop/siemens-datasheet-pdf-crawler?fpr=guboir) |
+| | [Lifecycle Tracker](https://apify.com/crawloop/siemens-sieportal-product-lifecycle-tracker?fpr=guboir) | [Document PDF Parser](https://apify.com/crawloop/siemens-sieportal-product-document-pdf-crawler?fpr=guboir) | [TED Datasheet Parser](https://apify.com/crawloop/siemens-datasheet-pdf-crawler?fpr=guboir) |
 
 ---
 
@@ -31,9 +31,8 @@ Extract **Siemens part numbers (MPN / MLFB)**, technical specifications, **produ
 ```
 Phase 1 — Discover MPNs          Phase 2 — Screen & enrich       Phase 3 — Documents & specs
 
-  Catalog Crawler  ──┐
-                      ├──► MPN list ──► Lifecycle Tracker ──► SiePortal Scraper
-  Category Scraper ──┘                          │
+  Catalog Crawler ──► MPN list ──► Lifecycle Tracker ──► SiePortal Scraper
+                                    │
                     ┌───────────────────────────┴───────────────────────────┐
                     ▼                                                       ▼
         Document Downloader (SIOS)                         TED Datasheet Downloader
@@ -49,8 +48,7 @@ Phase 1 — Discover MPNs          Phase 2 — Screen & enrich       Phase 3 —
 
 | Your goal | Actor |
 | :--- | :--- |
-| Find Siemens part numbers by keyword (`6ES`, `SIMATIC`, `S7-1200`) | [Catalog Crawler](https://apify.com/crawloop/siemens-sieportal-product-catalog-crawler?fpr=guboir) |
-| Export MPNs from a SiePortal category tree | [Category Scraper](https://apify.com/crawloop/siemens-category-scraper?fpr=guboir) |
+| Discover MPNs via keyword or full-catalog crawl | [Catalog Crawler](https://apify.com/crawloop/siemens-sieportal-product-catalog-crawler?fpr=guboir) |
 | Full specs, lifecycle, document links, accessories by MPN | [SiePortal Scraper](https://apify.com/crawloop/siemens-sieportal-scraper?fpr=guboir) |
 | Bulk BOM lifecycle and successor part numbers | [Lifecycle Tracker](https://apify.com/crawloop/siemens-sieportal-product-lifecycle-tracker?fpr=guboir) |
 | Download CE / UL / manual PDFs from SIOS | [Document Downloader](https://apify.com/crawloop/siemens-sieportal-document-downloader?fpr=guboir) |
@@ -75,7 +73,7 @@ Run the [Lifecycle Tracker](https://apify.com/crawloop/siemens-sieportal-product
 
 ### Procurement catalog export
 
-Discover Siemens part numbers with the [Catalog Crawler](https://apify.com/crawloop/siemens-sieportal-product-catalog-crawler?fpr=guboir) or [Category Scraper](https://apify.com/crawloop/siemens-category-scraper?fpr=guboir). Export deduplicated MPNs with product detail page URLs for ERP or PIM import.
+Discover Siemens part numbers with the [Catalog Crawler](https://apify.com/crawloop/siemens-sieportal-product-catalog-crawler?fpr=guboir). Export deduplicated MPNs with product detail page URLs for ERP or PIM import.
 
 ### Compliance documentation
 
@@ -93,7 +91,7 @@ Pay-per-event on Apify. Billed only for successful results — not for `NOT_FOUN
 
 | Actor group | Typical price |
 | :--- | :--- |
-| SiePortal Scraper, Catalog Crawler, Category Scraper, Lifecycle Tracker, Document Downloader | from **$5 / 1,000** results |
+| SiePortal Scraper, Catalog Crawler, Lifecycle Tracker, Document Downloader | from **$5 / 1,000** results |
 | TED Datasheet Downloader | **$2 / 1,000** PDFs |
 | TED / Document PDF Parser (parse-only) | **$2 / 1,000** PDFs |
 
@@ -160,7 +158,7 @@ A Siemens SiePortal scraper automates extraction of product data from the Siemen
 
 ### How do I export Siemens part numbers (MPN)?
 
-Use the [Catalog Crawler](https://apify.com/crawloop/siemens-sieportal-product-catalog-crawler?fpr=guboir) for keyword search (`6ES`, `SIMATIC`, …) or the [Category Scraper](https://apify.com/crawloop/siemens-category-scraper?fpr=guboir) to traverse SiePortal category pages. Both output deduplicated MPN lists with product detail URLs.
+Use the [Catalog Crawler](https://apify.com/crawloop/siemens-sieportal-product-catalog-crawler?fpr=guboir) for keyword search (`6ES`, `SIMATIC`, …). Both output deduplicated MPN lists with product detail URLs.
 
 ### How do I check Siemens product lifecycle and successor parts?
 
